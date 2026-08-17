@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nssf
+  namespace: open5gs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nssf
+  template:
+    metadata:
+      labels:
+        app: nssf
+    spec:
+      containers:
+      - name: nssf
+        image: arun1605/open5gs-nssf:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 7777
+        volumeMounts:
+        - name: nssf-config
+          mountPath: /etc/open5gs/nssf.yaml
+          subPath: nssf.yaml
+      volumes:
+      - name: nssf-config
+        configMap:
+          name: nssf-config

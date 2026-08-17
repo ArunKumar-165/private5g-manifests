@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udr
+  namespace: open5gs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udr
+  template:
+    metadata:
+      labels:
+        app: udr
+    spec:
+      containers:
+      - name: udr
+        image: arun1605/open5gs-udr:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 7777
+        volumeMounts:
+        - name: udr-config
+          mountPath: /etc/open5gs/udr.yaml
+          subPath: udr.yaml
+      volumes:
+      - name: udr-config
+        configMap:
+          name: udr-config

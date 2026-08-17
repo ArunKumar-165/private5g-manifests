@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ausf
+  namespace: open5gs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ausf
+  template:
+    metadata:
+      labels:
+        app: ausf
+    spec:
+      containers:
+      - name: ausf
+        image: arun1605/open5gs-ausf:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 7777
+        volumeMounts:
+        - name: ausf-config
+          mountPath: /etc/open5gs/ausf.yaml
+          subPath: ausf.yaml
+      volumes:
+      - name: ausf-config
+        configMap:
+          name: ausf-config
