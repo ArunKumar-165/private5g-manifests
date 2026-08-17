@@ -3,7 +3,10 @@
   "kind": "Deployment",
   "metadata": {
     "name": "open5gs-amf",
-    "namespace": "open5gs"
+    "namespace": "open5gs",
+    "labels": {
+      "demo": "gitops-test"
+    }
   },
   "spec": {
     "progressDeadlineSeconds": 600,
@@ -27,7 +30,8 @@
           "kubectl.kubernetes.io/restartedAt": "2026-08-17T11:46:41+05:30"
         },
         "labels": {
-          "app": "open5gs-amf"
+          "app": "open5gs-amf",
+          "demo": "gitops-test"
         }
       },
       "spec": {
