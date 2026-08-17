@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "nrf.yaml": "logger:\n  level: info\nglobal:\n  max:\n    ue: 1024\nnrf:\n  sbi:\n    server:\n      - address: 0.0.0.0\n        port: 7777\n        advertise: open5gs-nrf\n    serving:\n      - plmn_id:\n          mcc: 999\n          mnc: 70\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "nrf-config",
+    "namespace": "open5gs"
+  }
+}

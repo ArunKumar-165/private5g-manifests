@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "udm.yaml": "logger:\n  level: info\nudm:\n  sbi:\n    server:\n      - address: 0.0.0.0\n        port: 7777\n        advertise: open5gs-udm\n    client:\n      nrf:\n        - uri: http://open5gs-nrf:7777\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "udm-config",
+    "namespace": "open5gs"
+  }
+}

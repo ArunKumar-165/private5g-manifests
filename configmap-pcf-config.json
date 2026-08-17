@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "pcf.yaml": "logger:\n  level: info\ndb_uri: mongodb://mongodb/open5gs\npcf:\n  sbi:\n    server:\n      - address: 0.0.0.0\n        port: 7777\n        advertise: open5gs-pcf\n    client:\n      nrf:\n        - uri: http://open5gs-nrf:7777\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "pcf-config",
+    "namespace": "open5gs"
+  }
+}

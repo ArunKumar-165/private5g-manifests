@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "udr.yaml": "logger:\n  level: info\ndb_uri: mongodb://mongodb/open5gs\nudr:\n  sbi:\n    server:\n      - address: 0.0.0.0\n        port: 7777\n        advertise: open5gs-udr\n    client:\n      nrf:\n        - uri: http://open5gs-nrf:7777\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "udr-config",
+    "namespace": "open5gs"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "gnb.yaml": "mcc: '999'\nmnc: '70'\nnci: '0x000000010'\nidLength: 32\ntac: 1\nlinkIp: 0.0.0.0\nngapIp: 0.0.0.0\ngtpIp: 0.0.0.0\namfConfigs:\n  - address: 10.244.0.132\n    port: 38412\nslices:\n  - sst: 1\nignoreStreamIds: true\n",
+    "ue.yaml": "supi: 'imsi-999700000000001'\nmcc: '999'\nmnc: '70'\nprotectionScheme: 0\nhomeNetworkPublicKey: '81d33c3bfc68366c71ae1c19eda9ffde504e2874c43898d308cf05bfc1b6871e'\nhomeNetworkPublicKeyId: 0\nroutingIndicator: '0000'\nkey: '465b5ce8b199b49faa5f0a2ee238a6bc'\nop: 'e8ed289deba952e4283b54e88e6183ca'\nopType: 'OPC'\namf: '8000'\nimei: '356938035643803'\nimeiSv: '4370816125816151'\ngnbSearchList:\n  - 127.0.0.1\nuacAic:\n  mps: false\n  mcs: false\nuacAcc:\n  normalClass: 0\n  class11: false\n  class12: false\n  class13: false\n  class14: false\n  class15: false\nsessions:\n  - type: 'IPv4'\n    apn: 'internet'\n    slice:\n      sst: 1\nconfigured-nssai:\n  - sst: 1\ndefault-nssai:\n  - sst: 1\nintegrity:\n  IA1: true\n  IA2: true\n  IA3: true\nciphering:\n  EA1: true\n  EA2: true\n  EA3: true\nintegrityMaxRate:\n  uplink: 'full'\n  downlink: 'full'\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "ueransim-config",
+    "namespace": "open5gs"
+  }
+}

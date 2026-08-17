@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "bsf.yaml": "logger:\n  level: info\nbsf:\n  sbi:\n    server:\n      - address: 0.0.0.0\n        port: 7777\n        advertise: open5gs-bsf\n    client:\n      nrf:\n        - uri: http://open5gs-nrf:7777\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "bsf-config",
+    "namespace": "open5gs"
+  }
+}

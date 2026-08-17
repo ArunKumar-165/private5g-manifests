@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "smf.yaml": "logger:\n  level: info\nsmf:\n  sbi:\n    server:\n      - address: 0.0.0.0\n        port: 7777\n        advertise: open5gs-smf\n    client:\n      nrf:\n        - uri: http://open5gs-nrf:7777\n  pfcp:\n    server:\n      - dev: eth0\n    client:\n      upf:\n        - address: open5gs-upf\n  gtpc:\n    server:\n      - dev: eth0\n  gtpu:\n    server:\n      - dev: eth0\n  session:\n    - subnet: 10.45.0.0/16\n      gateway: 10.45.0.1\n  dns:\n    - 8.8.8.8\n    - 8.8.4.4\n  mtu: 1400\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "smf-config",
+    "namespace": "open5gs"
+  }
+}

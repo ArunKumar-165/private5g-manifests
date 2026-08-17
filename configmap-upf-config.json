@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "upf.yaml": "logger:\n  level: info\nupf:\n  pfcp:\n    server:\n      - dev: eth0\n  gtpu:\n    server:\n      - dev: eth0\n  session:\n    - subnet: 10.45.0.0/16\n      gateway: 10.45.0.1\n      dnn: internet\n  metrics:\n    server:\n      - address: 0.0.0.0\n        port: 9090\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "upf-config",
+    "namespace": "open5gs"
+  }
+}

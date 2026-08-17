@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "nssf.yaml": "logger:\n  level: info\nnssf:\n  sbi:\n    server:\n      - address: 0.0.0.0\n        port: 7777\n        advertise: open5gs-nssf\n    client:\n      nrf:\n        - uri: http://open5gs-nrf:7777\n      nsi:\n        - uri: http://open5gs-nrf:7777\n          s_nssai:\n            sst: 1\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "nssf-config",
+    "namespace": "open5gs"
+  }
+}
