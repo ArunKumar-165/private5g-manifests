@@ -31,8 +31,7 @@
         },
         "labels": {
           "app": "open5gs-amf",
-          "demo": "gitops-test",
-          "version": "v2"
+          "demo": "gitops-test"
         }
       },
       "spec": {
